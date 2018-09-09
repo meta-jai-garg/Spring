@@ -1,15 +1,17 @@
-package com.metacube.training.constructor_injection;
+package com.metacube.training.auto_wire_by_name;
 
 public class SpellChecker {
+
     private boolean status;
-    
+
     /**
-     * @param status
+     * @param status the status to set
      */
-    public SpellChecker(boolean status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
-    
+
+
     /**
      * @return the status
      */

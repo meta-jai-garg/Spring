@@ -1,7 +1,10 @@
-package com.metacube.training.setter_injection;
+package com.metacube.training.auto_wire_by_name;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class TextEditor {
 
+    @Autowired
     private SpellChecker spellChecker;
 
     /**
@@ -20,9 +23,13 @@ public class TextEditor {
     }
 
 
+    /**
+     * method to show whether spellChecker is on or of
+     */
     public void showStatus(){
      
         System.out.print("Spell checker is ");
+        
         if(spellChecker.isStatus())
             System.out.println("on");
         else

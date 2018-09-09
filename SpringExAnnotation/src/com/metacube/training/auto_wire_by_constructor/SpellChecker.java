@@ -1,4 +1,4 @@
-package com.metacube.training.setter_injection;
+package com.metacube.training.auto_wire_by_constructor;
 
 public class SpellChecker {
 
@@ -6,9 +6,9 @@ public class SpellChecker {
 
 	/**
 	 * @param status
-	 *            the status to set
 	 */
-	public void setStatus(boolean status) {
+	public SpellChecker(boolean status) {
+
 		this.status = status;
 	}
 

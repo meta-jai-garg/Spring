@@ -1,14 +1,33 @@
 package com.metacube.training.constructor_injection;
 
 public class TextEditor {
-	private SpellChecker spellChecker;
 
-	public TextEditor(SpellChecker spellChecker) {
-		System.out.println("Inside TextEditor constructor.");
-		this.spellChecker = spellChecker;
-	}
+    private SpellChecker spellChecker;
 
-	public void spellCheck() {
-		spellChecker.checkSpelling();
-	}
+    
+    /**
+     * @param spellChecker
+     */
+    public TextEditor(SpellChecker spellChecker) {
+        this.spellChecker = spellChecker;
+    }
+
+
+    /**
+     * @return the spellChecker
+     */
+    public SpellChecker getSpellChecker() {
+        return spellChecker;
+    }
+    
+    
+    public void showStatus(){     
+        System.out.print("Spell checker is ");
+       
+        if(spellChecker.isStatus())
+            System.out.println("on");
+        else
+            System.out.println("off");
+    }
+    
 }
